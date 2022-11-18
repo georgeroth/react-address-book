@@ -20,8 +20,8 @@ function ContactsList(props) {
                 {firstName} {lastName}
               </p>
               <p>
-                { /** TODO: Make a Link here to view contact */}
-                View
+                <Link to={`/contacts/${contact.id}`} state={{ contact }}>View</Link>
+                {console.log("Contact in contactlist is:", contact)}
               </p>
             </li>
           )
