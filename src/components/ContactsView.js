@@ -3,18 +3,13 @@ import { useParams, useLocation } from "react-router-dom"
 
 function ContactsView() {
   const [contact, setContact] = useState(false)
-
-  const location = useLocation();
+  const { id } = useParams()
 
   useEffect(() => {
-    if (location.state) {
-      const { contact } = location.state;
-      const contactIDToLoad = contact.id
-
-      console.log("contactIDToLoad is", contactIDToLoad)
-    }
-  }, [location]);
- 
+    fetch(`http://localhost:4000/contacts/${id}`)
+     .then(res => res.json())
+     .then(data => setContact(data))
+ }, [id])
 
   //TODO: Get the contact to load from the params and fetch.
   //With useEffect, load the contact when params changes
