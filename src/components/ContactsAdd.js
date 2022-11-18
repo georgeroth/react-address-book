@@ -73,7 +73,7 @@ function ContactsAdd(props) {
         </div>
       </form>
       {console.log("Submitted down here is", submitted)}
-      {submitted && (<><p>Contact added successfully.</p><p>You can add another one or return to the <Link to="/">contact list</Link>.</p></>)}
+      {submitted && (<><p className="success">Contact added successfully.</p><p>You can add another one or return to the <Link to="/">contact list</Link>.</p></>)}
     </>
   )
 }

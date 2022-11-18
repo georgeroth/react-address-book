@@ -151,3 +151,8 @@ h2 {
 .address-card h2 {
   font-size: 1.15rem;
 }
+
+.success {
+  color: #56c356;
+  font-weight: bold;
+}
