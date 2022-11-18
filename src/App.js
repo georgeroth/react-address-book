@@ -14,14 +14,11 @@ export default function App() {
      .then(data => setContacts(data))
   }, [])
 
- console.log(contacts)
-
   return (
     <>
       <nav>
         <h2>Menu</h2>
         <ul>
-          {/* TODO: Make these links */}
           <li><Link to="/">Contacts List</Link></li>
           <li><Link to="/contacts/add">Add New Contact</Link></li>
           
@@ -35,7 +32,7 @@ export default function App() {
           />
           <Route
             path="/contacts/add"
-            element={<ContactsAdd />}
+            element={<ContactsAdd contacts={contacts} setContacts={setContacts}/>}
           />
           <Route
             path="/contacts/:id"
