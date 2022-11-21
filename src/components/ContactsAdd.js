@@ -50,7 +50,10 @@ function ContactsAdd(props) {
         firstName: newContact.firstName,
         lastName: newContact.lastName,
         street: newContact.street,
-        city: newContact.city
+        city: newContact.city,
+        email: newContact.email,
+        linkedin: newContact.linkedin,
+        twitter: newContact.twitter
       })
     })
     const newContactsList = [...contacts, newContact ]
@@ -77,13 +80,13 @@ function ContactsAdd(props) {
         <input id="city" name="city" type="text" required onChange={handleInput} value={newContact.city}/>
 
         <label htmlFor="email">Email:</label>
-        <input id="email" name="email" type="email" required onChange={handleInput} value={newContact.email}/>
+        <input id="email" name="email" type="email" onChange={handleInput} value={newContact.email}/>
 
-        <label htmlFor="street">LinkedIn:</label>
-        <input id="linkedin" name="linkedin" type="text" required onChange={handleInput} value={newContact.linkedin}/>
+        <label htmlFor="linkedin">LinkedIn:</label>
+        <input id="linkedin" name="linkedin" type="text" onChange={handleInput} value={newContact.linkedin}/>
 
-        <label htmlFor="city">Twitter:</label>
-        <input id="twitter" name="twitter" type="text" required onChange={handleInput} value={newContact.twitter}/>
+        <label htmlFor="twitter">Twitter:</label>
+        <input id="twitter" name="twitter" type="text" onChange={handleInput} value={newContact.twitter}/>
 
         <div className="actions-section">
           <button className="button blue" type="submit">

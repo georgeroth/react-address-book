@@ -2,10 +2,12 @@
   "contacts": [
     {
       "id": 1,
-      "firstName": "John",
+      "firstName": "Johnasd",
       "lastName": "Carmack",
       "street": "10 Keen Street",
-      "city": "London"
+      "city": "London",
+      "email": "",
+      "linkedin": "asd"
     },
     {
       "id": 2,
