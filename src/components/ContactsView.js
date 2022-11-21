@@ -23,6 +23,9 @@ function ContactsView() {
     <div>
       <h2>{contact.firstName} {contact.lastName}</h2>
       <p>{contact.street} {contact.city}</p>
+      <p>{contact.email || "No email"}</p>
+      <p>{contact.linkedin || "No LinkedIn"}</p>
+      <p>{contact.twitter || "No Twitter"}</p>
     </div>
   )
 }

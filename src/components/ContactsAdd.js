@@ -6,7 +6,10 @@ function ContactsAdd(props) {
     firstName: "",
     lastName: "",
     street: "",
-    city: ""
+    city: "",
+    email: "",
+    linkedin: "",
+    twitter: ""
   }
   const { setContacts, contacts, submitted, setSubmitted } = props
   const [ newContact, setNewContact ] = useState(initialNewContact)
@@ -22,10 +25,17 @@ function ContactsAdd(props) {
     } else if (e.target.name === "street"){
       const newContactContainer = {... newContact, street: e.target.value}
       setNewContact(newContactContainer)
-    } else if (e.target.name === "city"){
-      const newContactContainer = {... newContact, city: e.target.value}
+    } else if (e.target.name === "email"){
+      const newContactContainer = {... newContact, email: e.target.value}
+      setNewContact(newContactContainer)
+    } else if (e.target.name === "linkedin"){
+      const newContactContainer = {... newContact, linkedin: e.target.value}
+      setNewContact(newContactContainer)
+    } else if (e.target.name === "twitter"){
+      const newContactContainer = {... newContact, twitter: e.target.value}
       setNewContact(newContactContainer)
     } 
+    
     console.log(newContact)
   }
 
@@ -65,6 +75,15 @@ function ContactsAdd(props) {
 
         <label htmlFor="city">City:</label>
         <input id="city" name="city" type="text" required onChange={handleInput} value={newContact.city}/>
+
+        <label htmlFor="email">Email:</label>
+        <input id="email" name="email" type="email" required onChange={handleInput} value={newContact.email}/>
+
+        <label htmlFor="street">LinkedIn:</label>
+        <input id="linkedin" name="linkedin" type="text" required onChange={handleInput} value={newContact.linkedin}/>
+
+        <label htmlFor="city">Twitter:</label>
+        <input id="twitter" name="twitter" type="text" required onChange={handleInput} value={newContact.twitter}/>
 
         <div className="actions-section">
           <button className="button blue" type="submit">
