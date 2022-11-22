@@ -28,14 +28,13 @@ export default function App() {
         <ul>
           <li><Link to="/" onClick={submittedFalse}>Contacts List</Link></li>
           <li><Link to="/contacts/add" onClick={submittedFalse}>Add New Contact</Link></li>
-          
         </ul>
       </nav>
       <main>
         <Routes>
           <Route
             path="/"
-            element={<ContactsList contacts={contacts} />}
+            element={<ContactsList contacts={contacts} setContacts={setContacts}/>}
           />
           <Route
             path="/contacts/add"

@@ -80,7 +80,7 @@ function ContactsAdd(props) {
       <form className="form-stack contact-form" onSubmit={submitForm}>
         <h2>Create Contact</h2>
 
-        <label htmlFor="firstName">First Name</label>
+        <label htmlFor="firstName">First Name:</label>
         <input id="firstName" name="firstName" type="text" required onChange={handleInput} value={contactToEdit.firstName}/>
 
         <label htmlFor="lastName">Last Name:</label>

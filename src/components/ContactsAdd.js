@@ -25,6 +25,9 @@ function ContactsAdd(props) {
     } else if (e.target.name === "street"){
       const newContactContainer = {... newContact, street: e.target.value}
       setNewContact(newContactContainer)
+    } else if (e.target.name === "city"){
+      const newContactContainer = {... newContact, city: e.target.value}
+      setNewContact(newContactContainer)
     } else if (e.target.name === "email"){
       const newContactContainer = {... newContact, email: e.target.value}
       setNewContact(newContactContainer)
@@ -67,7 +70,7 @@ function ContactsAdd(props) {
       <form className="form-stack contact-form" onSubmit={submitForm}>
         <h2>Create Contact</h2>
 
-        <label htmlFor="firstName">First Name</label>
+        <label htmlFor="firstName">First Name:</label>
         <input id="firstName" name="firstName" type="text" required onChange={handleInput} value={newContact.firstName}/>
 
         <label htmlFor="lastName">Last Name:</label>
