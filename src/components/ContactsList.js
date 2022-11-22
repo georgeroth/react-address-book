@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, } from "react"
 import { Link, useSearchParams } from "react-router-dom"
 
 function ContactsList(props) {
@@ -11,9 +11,16 @@ function ContactsList(props) {
     fetch(`http://localhost:4000/contacts/${contact.id}`, {
     method: 'DELETE'
     })
-    fetch("http://localhost:4000/contacts")
-    .then(res => res.json())
-    .then(data => setContacts(data))
+    const contactsWithoutRemoved = contacts.filter(contactToCheck => {
+      return contact !== contactToCheck
+    })
+    setContacts(contactsWithoutRemoved)
+  }
+
+  console.log("contacts is:", contacts)
+
+  if (contacts.length === 0) {
+    return <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
   }
 
   return (

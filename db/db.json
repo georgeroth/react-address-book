@@ -1,3 +1,24 @@
 {
-  "contacts": []
+  "contacts": [
+    {
+      "firstName": "Adam",
+      "lastName": "Smith",
+      "street": "Black Street",
+      "city": "London",
+      "email": "adam.smith@gmail.com",
+      "linkedin": "linkedin.com/in/asmith",
+      "twitter": "",
+      "id": 1
+    },
+    {
+      "firstName": "Another ",
+      "lastName": "Person",
+      "street": "Some street",
+      "city": "Some City",
+      "email": "",
+      "linkedin": "",
+      "twitter": "",
+      "id": 2
+    }
+  ]
 }

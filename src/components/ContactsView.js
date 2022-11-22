@@ -15,8 +15,10 @@ function ContactsView() {
   //With useEffect, load the contact when params changes
   //and update contact state
 
+
+  console.log("contact is:", contact)
   if (!contact) {
-    return <p>Loading</p>
+    return <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
   }
 
   return (

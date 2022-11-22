@@ -12,8 +12,18 @@ function ContactsAdd(props) {
     fetch(`http://localhost:4000/contacts/${id}`)
      .then(res => res.json())
      .then(data => setContactToEdit(data))
-  }, [])  
+  }, [])
 
+  console.log("contactToEdit is:", contactToEdit)
+
+  if (Object.keys(contactToEdit).length === 0) {
+    return (
+      <>
+        <h2>Edit Contact</h2>
+        <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+      </>
+      )
+  }
 
   const handleInput = (e) => {
 
@@ -78,7 +88,7 @@ function ContactsAdd(props) {
   return (
     <>
       <form className="form-stack contact-form" onSubmit={submitForm}>
-        <h2>Create Contact</h2>
+        <h2>Edit Contact</h2>
 
         <label htmlFor="firstName">First Name:</label>
         <input id="firstName" name="firstName" type="text" required onChange={handleInput} value={contactToEdit.firstName}/>
